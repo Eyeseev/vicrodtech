@@ -1,3 +1,4 @@
+# VicRodTech.com
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,27 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+   ```sh
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## ✉️ Contact
+
+Want to work together or have a question?  
+Use the [Contact page](https://vicrodtech.com/contact) on the site, or email me at [your-email@example.com].
+
+## 🛡️ Deployment & SSL
+
+- **Recommended:** Deploy on [Vercel](https://vercel.com/) for automatic SSL and CI/CD.
+- **Custom Domain:** Add your domain in Vercel dashboard for free HTTPS.
+- **Formspree:** Contact form is pre-configured for secure submissions.
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+---
+
+> Built and maintained by Vic Rod.
