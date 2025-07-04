@@ -8,9 +8,10 @@ import AnimatedAnchor from "../components/ui/AnimatedAnchor";
 import AnimatedCard from "../components/ui/AnimatedCard";
 
 const featuredProject = {
-  title: "Smart Support Dashboard",
-  description: "A real-time dashboard for tracking and resolving tech issues fast. Built with Next.js, automation, and a custom isometric UI.",
-  link: "/projects",
+  title: "Mindful Intentions Therapy",
+  description: "Professional psychotherapy practice website featuring individual, couples, and family therapy services. Built with modern web technologies to provide a warm, welcoming experience for clients seeking mental health support.",
+  link: "https://mindfulintentionslcswpllc.org/",
+  image: "/mindful-therapy-screenshot.png"
 };
 
 function FeaturedProjectBanner() {
@@ -31,11 +32,15 @@ function FeaturedProjectBanner() {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.7, delay: 0.1 }}
       >
-        <div className="w-32 h-32 flex-shrink-0 flex items-center justify-center">
-          <HeroIsometric className="w-full h-full" />
-        </div>
+        {featuredProject.image && (
+          <img
+            src={featuredProject.image}
+            alt={featuredProject.title + ' screenshot'}
+            className="w-40 h-40 object-cover rounded-lg border border-gray-200 shadow-sm mb-4 md:mb-0"
+          />
+        )}
         <div className="flex-1 text-left">
-          <h3 className="text-2xl font-bold mb-2 text-primary">{featuredProject.title}</h3>
+          <h3 className="text-2xl font-bold mb-2 text-gray-900">{featuredProject.title}</h3>
           <p className="mb-4 text-gray-700">{featuredProject.description}</p>
           <AnimatedAnchor
             href={featuredProject.link}
@@ -65,11 +70,11 @@ export default function Home() {
       <AnimatedSection className="w-full max-w-xl mx-auto mb-10">
         <HeroIsometric className="w-full h-auto max-h-56 mx-auto" />
       </AnimatedSection>
-      <AnimatedHeading as="h1" className="text-6xl font-extrabold mb-6 text-primary">
+      <AnimatedHeading as="h1" className="text-6xl font-extrabold mb-6 text-gray-900">
         I build clean sites and fix messy tech.
       </AnimatedHeading>
-      <AnimatedParagraph className="text-xl mb-10 text-gray-600 max-w-xl mx-auto">
-        Smart solutions, sharp design, no fluff. Let's talk.
+      <AnimatedParagraph className="text-xl mb-10" style={{ color: '#25367a' }}>
+        Smart solutions, sharp design, no bs. Let's talk.
       </AnimatedParagraph>
       <AnimatedAnchor
         href="/contact"

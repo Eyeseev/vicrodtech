@@ -27,7 +27,7 @@ export default function RootLayout({
   const pathname = typeof window !== "undefined" ? window.location.pathname : "";
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-grid`}>
         <NavBar />
         <main className="min-h-screen flex flex-col items-center justify-start px-4">
           {children}

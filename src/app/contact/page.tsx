@@ -9,11 +9,11 @@ import AnimatedForm from "../../components/ui/AnimatedForm";
 
 export default function Contact() {
   return (
-    <section className="w-full max-w-md mx-auto py-32 text-center bg-grid">
+    <section className="w-full mx-auto py-32 text-center">
       <AnimatedSection className="w-full max-w-xs mx-auto mb-8">
         <ContactEnvelope className="w-full h-auto max-h-20 mx-auto" />
       </AnimatedSection>
-      <AnimatedHeading as="h2" className="text-4xl font-extrabold mb-6 text-primary">
+      <AnimatedHeading as="h2" className="text-4xl font-extrabold mb-6 text-gray-900">
         Contact
       </AnimatedHeading>
       <AnimatedParagraph className="mb-10 text-gray-700">

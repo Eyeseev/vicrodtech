@@ -21,7 +21,7 @@ const NavBar = () => {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white border-b border-gray-100 py-4 px-6 flex items-center justify-between shadow-sm">
-      <Link href="/" className="text-xl font-bold tracking-tight text-primary">VicrodTech</Link>
+      <Link href="/" className="text-xl font-bold tracking-tight text-gray-900">VicrodTech</Link>
       <div className="space-x-6">
         {links.map(({ href, label }) => {
           const isActive = mounted && pathname === href;
