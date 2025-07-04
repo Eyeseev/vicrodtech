@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, SVGMotionProps } from "framer-motion";
 
 const gridLines = [
   "M10 170L310 170",
@@ -25,10 +25,9 @@ const nodes = [
   { cx: 160, cy: 120, r: 2 },
 ];
 
-const HeroIsometric: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
+const HeroIsometric: React.FC<SVGMotionProps<SVGSVGElement>> = (props) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const [parallax, setParallax] = useState({ x: 0, y: 0 });
-  const controls = useAnimation();
 
   // Parallax effect on mouse move
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -50,7 +49,7 @@ const HeroIsometric: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
       width="100%"
       height="auto"
       aria-hidden="true"
-      style={{ x: parallax.x, y: parallax.y }}
+      style={{ transform: `translate(${parallax.x}px, ${parallax.y}px)` }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       {...props}
