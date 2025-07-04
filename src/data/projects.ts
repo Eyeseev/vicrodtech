@@ -3,7 +3,8 @@ export const projects = [
     title: "VicRodTech.com",
     description: "Personal portfolio and project showcase site built with Next.js, React, and Tailwind CSS.",
     tech: "React • Next.js • TypeScript • Tailwind CSS",
-    link: "http://localhost:3000"
+    link: "http://localhost:3000",
+    image: "/vic-rod-tech-homepage.png"
   },
   {
     title: "Mindful Intentions Therapy",

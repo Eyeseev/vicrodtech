@@ -10,7 +10,7 @@ export default function About() {
       <AnimatedSection className="w-full max-w-xs mx-auto mb-8">
         <AboutNetwork className="w-full h-auto max-h-24 mx-auto" />
       </AnimatedSection>
-      <AnimatedHeading as="h2" className="text-4xl font-extrabold mb-6 text-gray-900">
+      <AnimatedHeading as="h2" className="text-4xl font-extrabold mb-6" style={{ color: '#1f4494' }}>
         About Me
       </AnimatedHeading>
       <AnimatedParagraph className="mb-10 text-gray-700">
@@ -22,7 +22,7 @@ export default function About() {
         <span>• Fast, clear communication</span>
       </AnimatedSection>
       <AnimatedSection className="mt-12 bg-white/70 rounded-xl shadow p-6 max-w-md mx-auto text-left border border-gray-100">
-        <h3 className="text-xl font-bold mb-2 text-gray-900">Why Work With Me</h3>
+        <h3 className="text-xl font-bold mb-2" style={{ color: '#111829' }}>Why Work With Me</h3>
         <ul className="list-disc pl-5 space-y-1 text-gray-700">
           <li>Reliable delivery, every time.</li>
           <li>Clear, fast communication—no guesswork.</li>

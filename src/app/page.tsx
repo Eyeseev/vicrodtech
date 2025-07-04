@@ -73,7 +73,7 @@ export default function Home() {
       <AnimatedHeading as="h1" className="text-6xl font-extrabold mb-6 text-gray-900">
         I build clean sites and fix messy tech.
       </AnimatedHeading>
-      <AnimatedParagraph className="text-xl mb-10" style={{ color: '#25367a' }}>
+      <AnimatedParagraph className="text-xl mb-10" style={{ color: '#1f4494' }}>
         Smart solutions, sharp design, no bs. Let's talk.
       </AnimatedParagraph>
       <AnimatedAnchor

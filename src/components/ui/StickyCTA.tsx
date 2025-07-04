@@ -45,12 +45,12 @@ export default function StickyCTA() {
       style={{ boxShadow: "0 8px 32px rgba(28,57,142,0.08)" }}
     >
       <motion.div animate={controls} className="flex items-center gap-4">
-        <span className="font-semibold text-gray-800">Let's work together</span>
         <Link
           href="/contact"
-          className="bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition font-semibold"
+          className="flex items-center gap-2 font-semibold text-gray-800 hover:text-primary focus:text-primary transition outline-none"
         >
-          Contact
+          <span>Let's work together</span>
+          <span className="bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition font-semibold">Contact</span>
         </Link>
       </motion.div>
       <button
