@@ -42,7 +42,7 @@ function useContactForm() {
         setSubmitted(true);
         setForm({ name: '', email: '', message: '', website: '' });
       }
-    } catch (err) {
+    } catch {
     } finally {
       setLoading(false);
     }
