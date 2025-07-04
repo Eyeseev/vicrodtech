@@ -1,3 +1,4 @@
+// Vercel: force rebuild, no unused pathname variable present
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -24,7 +25,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-grid`}>
