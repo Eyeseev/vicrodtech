@@ -1,6 +1,5 @@
 "use client";
 import ContactEnvelope from "../../components/svg/ContactEnvelope";
-import { motion } from "framer-motion";
 import AnimatedSection from "../../components/ui/AnimatedSection";
 import AnimatedHeading from "../../components/ui/AnimatedHeading";
 import AnimatedParagraph from "../../components/ui/AnimatedParagraph";
@@ -68,10 +67,10 @@ export default function Contact() {
         <ContactEnvelope className="w-full h-auto max-h-20 mx-auto" />
       </AnimatedSection>
       <AnimatedHeading as="h2" className="text-4xl font-extrabold mb-6" style={{ color: '#1f4494' }}>
-        Let's Connect
+        Let&apos;s Connect
       </AnimatedHeading>
       <AnimatedParagraph className="mb-6 text-gray-700">
-        I'd love to hear from you. Whether you have a question, want to collaborate, or just want to say hi—drop a message below. I usually reply within 24 hours.
+        I&apos;d love to hear from you. Whether you have a question, want to collaborate, or just want to say hi—drop a message below. I usually reply within 24 hours.
       </AnimatedParagraph>
       <form
         className="w-full max-w-lg bg-white rounded-xl shadow p-8 flex flex-col gap-4"

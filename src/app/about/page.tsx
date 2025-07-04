@@ -14,7 +14,7 @@ export default function About() {
         About Me
       </AnimatedHeading>
       <AnimatedParagraph className="mb-10 text-gray-700">
-        I'm Vic, a builder and problem-solver. I design, code, and support digital systems that just work. My approach: keep it sharp, keep it simple, always deliver.
+        I&apos;m Vic, a builder and problem-solver. I design, code, and support digital systems that just work. My approach: keep it sharp, keep it simple, always deliver.
       </AnimatedParagraph>
       <AnimatedSection className="flex flex-col items-center gap-2 text-left text-gray-600">
         <span>• Web development (React, Next.js, automation)</span>

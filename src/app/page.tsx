@@ -1,6 +1,5 @@
 "use client";
 import HeroIsometric from "../components/svg/HeroIsometric";
-import { motion } from "framer-motion";
 import AnimatedSection from "../components/ui/AnimatedSection";
 import AnimatedHeading from "../components/ui/AnimatedHeading";
 import AnimatedParagraph from "../components/ui/AnimatedParagraph";
@@ -74,7 +73,7 @@ export default function Home() {
         I build clean sites and fix messy tech.
       </AnimatedHeading>
       <AnimatedParagraph className="text-xl mb-10" style={{ color: '#1f4494' }}>
-        Smart solutions, sharp design, no bs. Let's talk.
+        Smart solutions, sharp design, no bs. Let&apos;s talk.
       </AnimatedParagraph>
       <AnimatedAnchor
         href="/contact"

@@ -49,7 +49,7 @@ export default function StickyCTA() {
           href="/contact"
           className="flex items-center gap-2 font-semibold text-gray-800 hover:text-primary focus:text-primary transition outline-none"
         >
-          <span>Let's work together</span>
+          <span>Let&apos;s work together</span>
           <span className="bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition font-semibold">Contact</span>
         </Link>
       </motion.div>
