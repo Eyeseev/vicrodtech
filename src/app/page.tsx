@@ -13,6 +13,38 @@ const featuredProject = {
   image: "/mindful-therapy-screenshot.png"
 };
 
+const services = [
+  {
+    title: "Done-for-You Website",
+    subtitle: "Launch-Ready Website Package",
+    price: "$200",
+    description: "A fast, affordable 1-page site built for small business owners, freelancers, and creators who need a clean online presence — fast.",
+    features: [
+      "1-page responsive site (Home, About, Services, Contact)",
+      "Mobile-friendly + fast-loading",
+      "Hosted on Vercel.com",
+      "Domain connection + basic SEO setup",
+      "One round of revisions",
+      "Delivered in 3–5 business days"
+    ]
+  },
+  {
+    title: "Website Audit & Full Redesign",
+    subtitle: "Complete Website Transformation",
+    price: "$300",
+    description: "Perfect for older or DIY sites that need a full refresh. You&apos;ll get a custom-built, modern site based on your content and goals.",
+    features: [
+      "Complete rebuild from scratch",
+      "Fully responsive + clean modern layout",
+      "Updated structure and content flow",
+      "Basic SEO + performance improvements",
+      "Delivered in 7–10 days",
+      "One round of revisions"
+    ],
+    note: "Client must provide existing site URL and all necessary content."
+  }
+];
+
 function FeaturedProjectBanner() {
   return (
     <>
@@ -63,6 +95,75 @@ function SectionDivider() {
   );
 }
 
+function ServicesSection() {
+  return (
+    <>
+      <AnimatedHeading as="h2" className="text-4xl font-extrabold mb-6 text-center" style={{ color: '#1f4494' }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6 }}
+      >
+        Services
+      </AnimatedHeading>
+      <AnimatedParagraph className="mb-12 text-center text-gray-700 max-w-2xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+      >
+        Professional web solutions tailored to your business needs
+      </AnimatedParagraph>
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto">
+        {services.map((service, idx) => (
+          <AnimatedCard
+            key={idx}
+            className="card flex flex-col gap-4 p-8"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+          >
+            <div className="text-center mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 !opacity-100 mb-2">{service.title}</h3>
+              <h4 className="text-lg text-gray-600 mb-4">{service.subtitle}</h4>
+              <div className="text-3xl font-bold text-primary !opacity-100">{service.price}</div>
+            </div>
+            
+            <p className="text-gray-700 !opacity-100 leading-relaxed">
+              {service.description}
+            </p>
+            
+            <ul className="space-y-3 mb-6 !opacity-100">
+              {service.features.map((feature, featureIdx) => (
+                <li key={featureIdx} className="flex items-start">
+                  <span className="text-green-600 mr-3 mt-1 font-bold">✓</span>
+                  <span className="text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            
+            {service.note && (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                <p className="text-yellow-800 text-sm">
+                  <strong>Note:</strong> {service.note}
+                </p>
+              </div>
+            )}
+            
+            <AnimatedAnchor
+              href="/contact"
+              className="mt-auto bg-[#1f4494] text-white font-semibold py-3 px-6 rounded hover:bg-[#18316b] transition-colors text-center"
+            >
+              Get Started
+            </AnimatedAnchor>
+          </AnimatedCard>
+        ))}
+      </div>
+    </>
+  );
+}
+
 export default function Home() {
   return (
     <AnimatedSection className="w-full flex flex-col items-center justify-center py-40 text-center bg-grid">
@@ -86,6 +187,8 @@ export default function Home() {
       >
         Get in touch
       </AnimatedAnchor>
+      <SectionDivider />
+      <ServicesSection />
       <SectionDivider />
       <FeaturedProjectBanner />
     </AnimatedSection>
