@@ -1,5 +1,4 @@
 "use client";
-import AnimatedSection from "../../components/ui/AnimatedSection";
 import AnimatedHeading from "../../components/ui/AnimatedHeading";
 import AnimatedParagraph from "../../components/ui/AnimatedParagraph";
 import AnimatedCard from "../../components/ui/AnimatedCard";
@@ -79,9 +78,9 @@ export default function ServicesPage() {
             <div className="text-3xl font-bold text-primary !opacity-100">$300</div>
           </div>
           
-          <p className="text-gray-700 !opacity-100 leading-relaxed">
-            Perfect for older or DIY sites that need a full refresh. You'll get a custom-built, modern site based on your content and goals.
-          </p>
+                      <p className="text-gray-700 !opacity-100 leading-relaxed">
+              Perfect for older or DIY sites that need a full refresh. You&apos;ll get a custom-built, modern site based on your content and goals.
+            </p>
           
           <ul className="space-y-3 mb-6 !opacity-100">
             <li className="flex items-start">
