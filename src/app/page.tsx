@@ -185,9 +185,9 @@ export default function Home() {
       <FeaturedProjectBanner />
       
       {/* New CTA Section Before Footer */}
-      <section className="bg-gray-100 py-8 px-4 text-center w-full">
-        <h2 className="text-xl font-semibold mb-2">Ready to start your site?</h2>
-        <p className="mb-4 text-sm">Let&apos;s build something clean and conversion-ready.</p>
+      <section className="bg-white py-10 px-4 text-center w-full border-t border-gray-200">
+        <h2 className="text-xl font-semibold mb-2 text-gray-900">Ready to start your site?</h2>
+        <p className="mb-4 text-sm text-gray-700">Let&apos;s build something clean and conversion-ready.</p>
         <AnimatedAnchor
           href="/contact"
           className="inline-block bg-black text-white py-3 px-6 rounded w-full font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
