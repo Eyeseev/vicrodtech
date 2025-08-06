@@ -2,7 +2,7 @@
 import AnimatedHeading from "../../components/ui/AnimatedHeading";
 import AnimatedParagraph from "../../components/ui/AnimatedParagraph";
 import AnimatedCard from "../../components/ui/AnimatedCard";
-import AnimatedButton from "../../components/ui/AnimatedButton";
+import AnimatedAnchor from "../../components/ui/AnimatedAnchor";
 
 export default function ServicesPage() {
   return (
@@ -80,12 +80,12 @@ export default function ServicesPage() {
           </div>
           
           <div className="text-center pt-6">
-            <AnimatedButton 
+            <AnimatedAnchor 
               href="/contact" 
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Get Started
-            </AnimatedButton>
+            </AnimatedAnchor>
           </div>
         </AnimatedCard>
 
@@ -184,12 +184,12 @@ export default function ServicesPage() {
               </ul>
               
               <div className="text-center">
-                <AnimatedButton 
+                <AnimatedAnchor 
                   href="/contact" 
                   className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
                 >
                   Choose Managed
-                </AnimatedButton>
+                </AnimatedAnchor>
               </div>
             </div>
 
@@ -224,12 +224,12 @@ export default function ServicesPage() {
               </div>
               
               <div className="text-center">
-                <AnimatedButton 
+                <AnimatedAnchor 
                   href="/contact" 
                   className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
                 >
                   Choose Self-Hosted
-                </AnimatedButton>
+                </AnimatedAnchor>
               </div>
             </div>
           </div>
@@ -241,12 +241,12 @@ export default function ServicesPage() {
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             Let&apos;s discuss your project and find the perfect solution for your business.
           </p>
-          <AnimatedButton 
+          <AnimatedAnchor 
             href="/contact" 
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
           >
             Start Your Project
-          </AnimatedButton>
+          </AnimatedAnchor>
         </div>
       </div>
     </section>

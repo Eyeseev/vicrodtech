@@ -2,7 +2,7 @@
 import ProjectsStack from "../../components/svg/ProjectsStack";
 import { projects } from "../../data/projects";
 import AnimatedCard from "../../components/ui/AnimatedCard";
-import AnimatedButton from "../../components/ui/AnimatedButton";
+import AnimatedAnchor from "../../components/ui/AnimatedAnchor";
 
 export default function Projects() {
   return (
@@ -85,12 +85,12 @@ export default function Projects() {
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             Let&apos;s discuss your project and create something amazing for your business.
           </p>
-          <AnimatedButton 
+          <AnimatedAnchor 
             href="/contact" 
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
           >
             Start Your Project
-          </AnimatedButton>
+          </AnimatedAnchor>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import AboutNetwork from "../../components/svg/AboutNetwork";
 import AnimatedSection from "../../components/ui/AnimatedSection";
 import AnimatedHeading from "../../components/ui/AnimatedHeading";
 import AnimatedParagraph from "../../components/ui/AnimatedParagraph";
-import AnimatedButton from "../../components/ui/AnimatedButton";
+import AnimatedAnchor from "../../components/ui/AnimatedAnchor";
 
 export default function About() {
   return (
@@ -87,12 +87,12 @@ export default function About() {
             <p className="text-lg text-gray-700 mb-6">
               Think we&apos;d be a good fit?
             </p>
-            <AnimatedButton 
+            <AnimatedAnchor 
               href="/contact" 
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Start your site →
-            </AnimatedButton>
+            </AnimatedAnchor>
           </AnimatedSection>
         </div>
       </div>
