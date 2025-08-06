@@ -43,7 +43,7 @@ function FeaturedProjectBanner() {
           <p className="mb-4 text-gray-700">{featuredProject.description}</p>
           <AnimatedAnchor
             href={featuredProject.link}
-            className="inline-block bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-block bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full md:w-auto text-center"
           >
             View Project
           </AnimatedAnchor>
@@ -96,7 +96,7 @@ function ServicesSection() {
             <h3 className="text-2xl font-semibold text-gray-900">
               Modern Starter Site
             </h3>
-            <p className="text-xl text-blue-600 font-medium">
+            <p className="text-lg font-semibold text-blue-600">
               $1,200 Flat Rate
             </p>
             <p className="text-gray-600">
@@ -121,7 +121,7 @@ function ServicesSection() {
           <div className="text-center pt-4">
             <AnimatedAnchor
               href="/contact"
-              className="inline-block bg-[#1f4494] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#18316b] transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="inline-block bg-[#1f4494] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#18316b] transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full mt-4"
             >
               Get a Custom Quote
             </AnimatedAnchor>
@@ -134,7 +134,7 @@ function ServicesSection() {
 
 export default function Home() {
   return (
-    <AnimatedSection className="w-full flex flex-col items-center justify-center py-20 space-y-16 bg-grid">
+    <AnimatedSection className="w-full flex flex-col items-center justify-center pt-24 pb-20 space-y-16 bg-grid">
       {/* Hero Section */}
       <AnimatedSection className="w-full max-w-2xl mx-auto text-center space-y-4">
         {/* Keep existing visual */}
@@ -153,10 +153,10 @@ export default function Home() {
         </AnimatedParagraph>
         
         {/* Updated CTA buttons */}
-        <div className="mt-6 flex flex-wrap gap-4 justify-center">
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
           <AnimatedAnchor
             href="/contact"
-            className="inline-block bg-[#1f4494] text-white px-8 py-4 rounded-lg hover:bg-[#18316b] transition font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-block bg-[#1f4494] text-white px-8 py-4 rounded-lg hover:bg-[#18316b] transition font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full sm:w-auto text-center"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.6 }}
@@ -167,7 +167,7 @@ export default function Home() {
           </AnimatedAnchor>
           <AnimatedAnchor
             href="/services"
-            className="inline-block bg-white text-[#1f4494] border-2 border-[#1f4494] px-8 py-4 rounded-lg hover:bg-[#1f4494] hover:text-white transition font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-block bg-white text-[#1f4494] border-2 border-[#1f4494] px-8 py-4 rounded-lg hover:bg-[#1f4494] hover:text-white transition font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full sm:w-auto text-center"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.7 }}
@@ -183,6 +183,18 @@ export default function Home() {
       <ServicesSection />
       <SectionDivider />
       <FeaturedProjectBanner />
+      
+      {/* New CTA Section Before Footer */}
+      <section className="bg-gray-100 py-8 px-4 text-center w-full">
+        <h2 className="text-xl font-semibold mb-2">Ready to start your site?</h2>
+        <p className="mb-4 text-sm">Let&apos;s build something clean and conversion-ready.</p>
+        <AnimatedAnchor
+          href="/contact"
+          className="inline-block bg-black text-white py-3 px-6 rounded w-full font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          Start My Website
+        </AnimatedAnchor>
+      </section>
     </AnimatedSection>
   );
 }

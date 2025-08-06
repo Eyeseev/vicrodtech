@@ -30,13 +30,13 @@ export const metadata: Metadata = {
 // STEP 1B: Added footer with privacy policy and terms links
 function Footer() {
   return (
-    <footer className="w-full bg-gray-50 border-t border-gray-200 py-8 mt-20">
-      <div className="max-w-6xl mx-auto px-4">
+    <footer className="w-full bg-gray-50 border-t border-gray-200 px-6 py-8 mt-20">
+      <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-600 text-sm">
             © 2024 VicRodTech. All rights reserved.
           </div>
-          <div className="flex gap-6 text-sm">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-6 text-sm">
             <Link 
               href="/privacy-policy" 
               className="text-gray-600 hover:text-[#1f4494] transition-colors"

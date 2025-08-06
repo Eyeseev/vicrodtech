@@ -77,7 +77,7 @@ export default function Projects() {
                 <div className="mt-4 flex gap-4">
                   <AnimatedAnchor 
                     href={project.link} 
-                    className="inline-block text-blue-600 hover:text-blue-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded" 
+                    className="inline-block text-blue-600 hover:text-blue-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded w-full sm:w-auto text-center py-2" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -99,7 +99,7 @@ export default function Projects() {
           </AnimatedParagraph>
           <AnimatedAnchor 
             href="/contact" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full sm:w-auto"
           >
             Start My Website
           </AnimatedAnchor>

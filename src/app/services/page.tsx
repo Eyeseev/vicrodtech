@@ -19,7 +19,7 @@ export default function ServicesPage() {
           <div className="mt-8">
             <AnimatedAnchor 
               href="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full sm:w-auto inline-block"
             >
               Start My Website
             </AnimatedAnchor>
@@ -64,7 +64,7 @@ export default function ServicesPage() {
               </p>
               <AnimatedAnchor 
                 href="/contact" 
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full sm:w-auto inline-block"
               >
                 Start My Website
               </AnimatedAnchor>
@@ -86,57 +86,57 @@ export default function ServicesPage() {
             </AnimatedHeading>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border rounded-xl p-4 shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 space-y-8 md:space-y-0">
+            <div className="shadow-md rounded-lg p-4">
               <h3 className="text-xl font-semibold text-gray-900">Pro Email Setup</h3>
               <p className="text-gray-700 mt-1 text-base">
                 Get a professional email address using Google Workspace, connected to your domain.
               </p>
             </div>
             
-            <div className="border rounded-xl p-4 shadow-sm">
+            <div className="shadow-md rounded-lg p-4">
               <h3 className="text-xl font-semibold text-gray-900">Domain Setup & DNS</h3>
               <p className="text-gray-700 mt-1 text-base">
                 I&apos;ll handle domain registration and DNS configuration for seamless setup.
               </p>
             </div>
             
-            <div className="border rounded-xl p-4 shadow-sm">
+            <div className="shadow-md rounded-lg p-4">
               <h3 className="text-xl font-semibold text-gray-900">Blog Setup</h3>
               <p className="text-gray-700 mt-1 text-base">
                 Add a blog section to share your expertise and improve SEO rankings.
               </p>
             </div>
             
-            <div className="border rounded-xl p-4 shadow-sm">
+            <div className="shadow-md rounded-lg p-4">
               <h3 className="text-xl font-semibold text-gray-900">Booking Integration</h3>
               <p className="text-gray-700 mt-1 text-base">
                 Integrate Calendly or other booking tools for seamless client scheduling.
               </p>
             </div>
             
-            <div className="border rounded-xl p-4 shadow-sm">
+            <div className="shadow-md rounded-lg p-4">
               <h3 className="text-xl font-semibold text-gray-900">Payment Integration</h3>
               <p className="text-gray-700 mt-1 text-base">
                 Add Stripe or PayPal for online payments and invoicing.
               </p>
             </div>
             
-            <div className="border rounded-xl p-4 shadow-sm">
+            <div className="shadow-md rounded-lg p-4">
               <h3 className="text-xl font-semibold text-gray-900">Portfolio Gallery</h3>
               <p className="text-gray-700 mt-1 text-base">
                 Showcase your work with a professional portfolio section.
               </p>
             </div>
             
-            <div className="border rounded-xl p-4 shadow-sm">
+            <div className="shadow-md rounded-lg p-4">
               <h3 className="text-xl font-semibold text-gray-900">Extra Pages</h3>
               <p className="text-gray-700 mt-1 text-base">
                 Additional custom pages like Services, FAQ, or Testimonials.
               </p>
             </div>
             
-            <div className="border rounded-xl p-4 shadow-sm">
+            <div className="shadow-md rounded-lg p-4">
               <h3 className="text-xl font-semibold text-gray-900">Post-Launch Updates</h3>
               <p className="text-gray-700 mt-1 text-base">
                 Ongoing support and updates after your site goes live.
@@ -186,7 +186,7 @@ export default function ServicesPage() {
           </p>
           <AnimatedAnchor 
             href="/contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full sm:w-auto inline-block"
           >
             Start My Website
           </AnimatedAnchor>
