@@ -69,7 +69,7 @@ function FeaturedProjectBanner() {
 
 function SectionDivider() {
   return (
-    <div className="w-full flex justify-center my-20">
+    <div className="w-full flex justify-center my-8">
       <svg width="100%" height="40" viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="max-w-5xl w-full">
         <path d="M0 20 Q 360 0 720 20 T 1440 20 V40 H0V20Z" fill="#f3f4f6" />
       </svg>
@@ -98,39 +98,44 @@ function ServicesSection() {
         Clean, fast, custom-coded websites that convert visitors into customers.
       </AnimatedParagraph>
       
-      <div className="max-w-4xl mx-auto">
+      {/* 2. Pricing Card with improved design */}
+      <div className="bg-gradient-to-b from-white via-gray-50 to-gray-100 rounded-xl p-10 shadow-lg max-w-2xl mx-auto">
         <AnimatedCard
-          className="card flex flex-col gap-6 p-8 border-2 border-blue-100 bg-gradient-to-br from-blue-50 to-white"
+          className="flex flex-col space-y-4"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-center mb-4">
-            <h3 className="text-3xl font-bold text-gray-900 !opacity-100 mb-2">{coreService.title}</h3>
-            <div className="text-4xl font-bold text-primary !opacity-100 mb-2">{coreService.price}</div>
+          <div className="text-center space-y-4">
+            <h3 className="text-3xl font-bold text-gray-900 !opacity-100">{coreService.title}</h3>
+            {/* 2. High contrast price */}
+            <div className="text-3xl font-bold text-black !opacity-100">{coreService.price}</div>
             <p className="text-gray-600 !opacity-100">{coreService.subtitle}</p>
           </div>
           
-          <p className="text-gray-700 !opacity-100 leading-relaxed text-center">
-            {coreService.description}
-          </p>
+          <div className="space-y-4">
+            <p className="text-gray-700 !opacity-100 leading-relaxed text-center">
+              {coreService.description}
+            </p>
+            
+            <ul className="space-y-3 !opacity-100 max-w-2xl mx-auto">
+              {coreService.features.map((feature, featureIdx) => (
+                <li key={featureIdx} className="flex items-start">
+                  <span className="text-green-600 mr-3 mt-1 font-bold">✓</span>
+                  <span className="text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           
-          <ul className="space-y-3 mb-6 !opacity-100 max-w-2xl mx-auto">
-            {coreService.features.map((feature, featureIdx) => (
-              <li key={featureIdx} className="flex items-start">
-                <span className="text-green-600 mr-3 mt-1 font-bold">✓</span>
-                <span className="text-gray-700">{feature}</span>
-              </li>
-            ))}
-          </ul>
-          
-          <div className="text-center">
+          {/* 2. Clear CTA button under feature list */}
+          <div className="text-center pt-4">
             <AnimatedAnchor
-              href="/services"
+              href="/contact"
               className="inline-block bg-[#1f4494] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#18316b] transition-colors text-lg"
             >
-              View All Services
+              Get a Quote
             </AnimatedAnchor>
           </div>
         </AnimatedCard>
@@ -141,34 +146,37 @@ function ServicesSection() {
 
 export default function Home() {
   return (
-    <AnimatedSection className="w-full flex flex-col items-center justify-center py-40 text-center bg-grid">
-      {/* STEP 1A: Keeping existing visual exactly as is */}
-      <AnimatedSection className="w-full max-w-xl mx-auto mb-10">
-        <HeroIsometric className="w-full h-auto max-h-56 mx-auto" />
+    <AnimatedSection className="w-full flex flex-col items-center justify-center py-20 space-y-16 bg-grid">
+      {/* 1. Hero Section with improvements */}
+      <AnimatedSection className="w-full max-w-2xl mx-auto text-center space-y-4">
+        {/* Keep existing visual */}
+        <div className="w-full max-w-xl mx-auto mb-10">
+          <HeroIsometric className="w-full h-auto max-h-56 mx-auto" />
+        </div>
+        
+        {/* 1. Increased headline size */}
+        <AnimatedHeading as="h1" className="text-5xl font-extrabold text-gray-900">
+          Custom-coded websites for small businesses, done fast and clean.
+        </AnimatedHeading>
+        
+        {/* 1. Added subheading */}
+        <AnimatedParagraph className="text-xl text-gray-600">
+          Custom-coded websites for small business owners — done fast, clean, and on budget.
+        </AnimatedParagraph>
+        
+        {/* 1. CTA button with improved spacing */}
+        <AnimatedAnchor
+          href="/contact"
+          className="inline-block bg-[#1f4494] text-white px-8 py-4 rounded-lg hover:bg-[#18316b] transition font-semibold text-lg"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          Start Your Project
+        </AnimatedAnchor>
       </AnimatedSection>
-      
-      {/* STEP 2A: Strong client-facing headline */}
-      <AnimatedHeading as="h1" className="text-4xl md:text-6xl font-extrabold mb-6 text-gray-900">
-        Custom-coded websites for small businesses, done fast and clean.
-      </AnimatedHeading>
-      
-      {/* STEP 2B: Intro paragraph explaining who the service is for */}
-      <AnimatedParagraph className="text-lg md:text-xl mb-8 text-gray-700 max-w-3xl mx-auto">
-        I build fast, modern websites for local service pros, solo creatives, and small businesses who want to look legit online without wasting time on bloated builders or overpriced agencies.
-      </AnimatedParagraph>
-      
-      {/* STEP 2C: Bold CTA button */}
-      <AnimatedAnchor
-        href="/contact"
-        className="inline-block bg-[#1f4494] text-white px-8 py-4 rounded-lg hover:bg-[#18316b] transition font-semibold text-lg"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, delay: 0.6 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.97 }}
-      >
-        Get a Free Quote
-      </AnimatedAnchor>
       
       <SectionDivider />
       <ServicesSection />
