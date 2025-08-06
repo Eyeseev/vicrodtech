@@ -20,16 +20,37 @@ export default function Projects() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
           >
-            {project.image && (
+            {/* STEP 4B: Wrapped image in anchor tag to live site */}
+            {project.image && project.link && (
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                <img
+                  src={project.image}
+                  alt={project.title + ' screenshot'}
+                  className="w-full aspect-video object-cover rounded-lg mb-4 border border-gray-200 shadow-sm max-h-48 hover:opacity-90 transition-opacity"
+                />
+              </a>
+            )}
+            {project.image && !project.link && (
               <img
                 src={project.image}
                 alt={project.title + ' screenshot'}
                 className="w-full aspect-video object-cover rounded-lg mb-4 border border-gray-200 shadow-sm max-h-48"
               />
             )}
+            
             <h3 className="text-2xl font-bold text-gray-900 !opacity-100">{project.title}</h3>
             <p className="text-gray-700 dark:text-gray-300 !opacity-100">{project.description}</p>
+            
+            {/* STEP 4A: Added client type and tech stack info */}
+            <div className="text-sm text-gray-600 !opacity-100">
+              <p>Built for {project.clientType}. Tech: {project.techStack}.</p>
+            </div>
+            
             <span className="text-primary text-sm font-medium !opacity-100">{project.tech}</span>
+            
+            {/* STEP 4C: Added unique project detail */}
+            <p className="text-sm text-gray-600 italic !opacity-100">{project.uniqueDetail}</p>
+            
             {project.link && (
               <a href={project.link} className="text-primary underline mt-2" target="_blank" rel="noopener noreferrer">View Project</a>
             )}

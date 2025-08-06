@@ -4,21 +4,36 @@ export const projects = [
     description: "Personal portfolio and project showcase site built with Next.js, React, and Tailwind CSS.",
     tech: "React • Next.js • TypeScript • Tailwind CSS",
     link: "http://localhost:3000",
-    image: "/vic-rod-tech-homepage.png"
+    image: "/vic-rod-tech-homepage.png",
+    // STEP 4A: Added client type and tech info
+    clientType: "Personal portfolio",
+    techStack: "Next.js + Vercel",
+    // STEP 4C: Added unique project detail
+    uniqueDetail: "Designed for speed and simplicity to showcase web development skills."
   },
   {
     title: "Mindful Intentions Therapy",
     description: "Professional psychotherapy practice website featuring individual, couples, and family therapy services. Built with modern web technologies to provide a warm, welcoming experience for clients seeking mental health support.",
     tech: "React • Next.js • TypeScript • Tailwind CSS",
     link: "https://mindfulintentionslcswpllc.org/",
-    image: "/mindful-therapy-screenshot.png"
+    image: "/mindful-therapy-screenshot.png",
+    // STEP 4A: Added client type and tech info
+    clientType: "Psychotherapy practice",
+    techStack: "Next.js + Vercel",
+    // STEP 4C: Added unique project detail
+    uniqueDetail: "Built with warm, calming design to create a safe space for therapy clients."
   },
   {
     title: "Private IT Support",
     description: "Professional IT support and website services for small business owners, freelancers, and creators. Features booking, testimonials, and clear, jargon-free communication. Built for speed, accessibility, and ease of use.",
     tech: "React • Next.js • TypeScript • Tailwind CSS",
     link: "https://privateitsupport.com/",
-    image: "/private-it-support-screenshot.png"
+    image: "/private-it-support-screenshot.png",
+    // STEP 4A: Added client type and tech info
+    clientType: "IT support business",
+    techStack: "Next.js + Vercel",
+    // STEP 4C: Added unique project detail
+    uniqueDetail: "Designed for speed and accessibility to help small businesses get tech support quickly."
   },
   // Add more projects here
 ]; 

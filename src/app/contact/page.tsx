@@ -6,7 +6,7 @@ import AnimatedParagraph from "../../components/ui/AnimatedParagraph";
 import { useState, ChangeEvent, FormEvent } from "react";
 
 function useContactForm() {
-  const [form, setForm] = useState({ name: '', email: '', message: '', website: '' });
+  const [form, setForm] = useState({ name: '', email: '', businessName: '', message: '', website: '' });
   const [errors, setErrors] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -36,11 +36,16 @@ function useContactForm() {
       const res = await fetch('https://formspree.io/f/xovwbbdb', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: form.name, email: form.email, message: form.message })
+        body: JSON.stringify({ 
+          name: form.name, 
+          email: form.email, 
+          businessName: form.businessName,
+          message: form.message 
+        })
       });
       if (res.ok) {
         setSubmitted(true);
-        setForm({ name: '', email: '', message: '', website: '' });
+        setForm({ name: '', email: '', businessName: '', message: '', website: '' });
       }
     } catch {
     } finally {
@@ -70,7 +75,7 @@ export default function Contact() {
         Let&apos;s Connect
       </AnimatedHeading>
       <AnimatedParagraph className="mb-6 text-gray-700">
-        I&apos;d love to hear from you. Whether you have a question, want to collaborate, or just want to say hi—drop a message below. I usually reply within 24 hours.
+        Ready to get started on your custom website? Whether you have a project in mind, want to discuss your needs, or just want to say hi—drop a message below. I usually reply within 24 hours.
       </AnimatedParagraph>
       <form
         className="w-full max-w-lg bg-white rounded-xl shadow p-8 flex flex-col gap-4"
@@ -122,8 +127,24 @@ export default function Contact() {
           />
           {errors.email && <span id="email-error" className="text-red-600 text-sm">{errors.email}</span>}
         </div>
+        
+        {/* STEP 5A: Added Business/Project Name field */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="message" className="font-medium text-gray-900">Message</label>
+          <label htmlFor="businessName" className="font-medium text-gray-900">Business / Project Name <span className="text-gray-500 text-sm">(optional)</span></label>
+          <input
+            id="businessName"
+            name="businessName"
+            type="text"
+            autoComplete="organization"
+            className="border border-gray-300 rounded px-4 py-2 focus:outline-primary"
+            value={form.businessName}
+            onChange={handleChange}
+            placeholder="Your business name or project title"
+          />
+        </div>
+        
+        <div className="flex flex-col gap-1">
+          <label htmlFor="message" className="font-medium text-gray-900">Project Goals or Questions</label>
           <textarea
             id="message"
             name="message"
@@ -134,6 +155,7 @@ export default function Contact() {
             required
             aria-invalid={!!errors.message}
             aria-describedby="message-error"
+            placeholder="Tell me about your project goals, timeline, or any questions you have..."
           />
           {errors.message && <span id="message-error" className="text-red-600 text-sm">{errors.message}</span>}
         </div>

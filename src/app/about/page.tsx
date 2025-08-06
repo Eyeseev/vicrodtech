@@ -13,21 +13,22 @@ export default function About() {
       <AnimatedHeading as="h2" className="text-4xl font-extrabold mb-6" style={{ color: '#1f4494' }}>
         About Me
       </AnimatedHeading>
-      <AnimatedParagraph className="mb-10 text-gray-700">
-        I&apos;m Vic, a builder and problem-solver. I design, code, and support digital systems that just work. My approach: keep it sharp, keep it simple, always deliver.
+      <AnimatedParagraph className="mb-10 text-gray-700 max-w-3xl mx-auto">
+        I&apos;m Vic, a web developer and problem-solver. I build clean, fast, custom-coded websites for service-based businesses, creatives, and small business owners. My approach: keep it sharp, keep it simple, always deliver.
       </AnimatedParagraph>
-      <AnimatedSection className="flex flex-col items-center gap-2 text-left text-gray-600">
-        <span>• Web development (React, Next.js, automation)</span>
-        <span>• Tech support wins & creative solutions</span>
-        <span>• Fast, clear communication</span>
+      <AnimatedSection className="flex flex-col items-center gap-2 text-left text-gray-600 max-w-2xl mx-auto">
+        <span>• Custom-coded websites with Next.js and modern technologies</span>
+        <span>• Clean, responsive design that converts visitors to customers</span>
+        <span>• Fast, clear communication and reliable delivery</span>
+        <span>• SEO-ready sites that help you get found online</span>
       </AnimatedSection>
       <AnimatedSection className="mt-12 bg-white/70 rounded-xl shadow p-6 max-w-md mx-auto text-left border border-gray-100">
         <h3 className="text-xl font-bold mb-2" style={{ color: '#111829' }}>Why Work With Me</h3>
         <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li>Reliable delivery, every time.</li>
-          <li>Clear, fast communication—no guesswork.</li>
-          <li>Quick turnarounds that keep your momentum.</li>
-          <li>I fix the tech headaches that slow you down.</li>
+          <li>Custom-coded websites, not cookie-cutter templates</li>
+          <li>Fast, responsive sites that work on all devices</li>
+          <li>Clear communication and reliable delivery</li>
+          <li>SEO-optimized to help you get found online</li>
         </ul>
       </AnimatedSection>
     </section>

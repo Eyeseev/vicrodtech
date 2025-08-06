@@ -13,37 +13,19 @@ const featuredProject = {
   image: "/mindful-therapy-screenshot.png"
 };
 
-const services = [
-  {
-    title: "Done-for-You Website",
-    subtitle: "Launch-Ready Website Package",
-    price: "$200",
-    description: "A fast, affordable 1-page site built for small business owners, freelancers, and creators who need a clean online presence — fast.",
-    features: [
-      "1-page responsive site (Home, About, Services, Contact)",
-      "Mobile-friendly + fast-loading",
-      "Hosted on Vercel.com",
-      "Domain connection + basic SEO setup",
-      "One round of revisions",
-      "Delivered in 3–5 business days"
-    ]
-  },
-  {
-    title: "Website Audit & Full Redesign",
-    subtitle: "Complete Website Transformation",
-    price: "$300",
-    description: "Perfect for older or DIY sites that need a full refresh. You&apos;ll get a custom-built, modern site based on your content and goals.",
-    features: [
-      "Complete rebuild from scratch",
-      "Fully responsive + clean modern layout",
-      "Updated structure and content flow",
-      "Basic SEO + performance improvements",
-      "Delivered in 7–10 days",
-      "One round of revisions"
-    ],
-    note: "Client must provide existing site URL and all necessary content."
-  }
-];
+const coreService = {
+  title: "Modern Starter Site",
+  subtitle: "Perfect foundation for growing businesses",
+  price: "$1,200",
+  description: "3–5 page custom-coded website built with Next.js, hosted on Vercel, fully responsive and SEO-ready. Client provides content (copywriting available as add-on).",
+  features: [
+    "3–5 page custom-coded website built with Next.js",
+    "Hosted on Vercel with SSL & CDN",
+    "Fully responsive and SEO-ready",
+    "Client provides content (copywriting available as add-on)",
+    "Page examples: Homepage, About, Contact + 2 of choice"
+  ]
+};
 
 function FeaturedProjectBanner() {
   return (
@@ -104,61 +86,54 @@ function ServicesSection() {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.6 }}
       >
-        Services
+        Services & Pricing
       </AnimatedHeading>
-      <AnimatedParagraph className="mb-12 text-center text-gray-700 max-w-2xl mx-auto"
+      <AnimatedParagraph className="mb-12 text-center text-gray-700 max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
-        Professional web solutions tailored to your business needs
+        Professional web solutions for service-based businesses, creatives, and small business owners. 
+        Clean, fast, custom-coded websites that convert visitors into customers.
       </AnimatedParagraph>
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto">
-        {services.map((service, idx) => (
-          <AnimatedCard
-            key={idx}
-            className="card flex flex-col gap-4 p-8"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-          >
-            <div className="text-center mb-4">
-              <h3 className="text-2xl font-bold text-gray-900 !opacity-100 mb-2">{service.title}</h3>
-              <h4 className="text-lg text-gray-600 mb-4">{service.subtitle}</h4>
-              <div className="text-3xl font-bold text-primary !opacity-100">{service.price}</div>
-            </div>
-            
-            <p className="text-gray-700 !opacity-100 leading-relaxed">
-              {service.description}
-            </p>
-            
-            <ul className="space-y-3 mb-6 !opacity-100">
-              {service.features.map((feature, featureIdx) => (
-                <li key={featureIdx} className="flex items-start">
-                  <span className="text-green-600 mr-3 mt-1 font-bold">✓</span>
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-            
-            {service.note && (
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-                <p className="text-yellow-800 text-sm">
-                  <strong>Note:</strong> {service.note}
-                </p>
-              </div>
-            )}
-            
+      
+      <div className="max-w-4xl mx-auto">
+        <AnimatedCard
+          className="card flex flex-col gap-6 p-8 border-2 border-blue-100 bg-gradient-to-br from-blue-50 to-white"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <div className="text-center mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 !opacity-100 mb-2">{coreService.title}</h3>
+            <div className="text-4xl font-bold text-primary !opacity-100 mb-2">{coreService.price}</div>
+            <p className="text-gray-600 !opacity-100">{coreService.subtitle}</p>
+          </div>
+          
+          <p className="text-gray-700 !opacity-100 leading-relaxed text-center">
+            {coreService.description}
+          </p>
+          
+          <ul className="space-y-3 mb-6 !opacity-100 max-w-2xl mx-auto">
+            {coreService.features.map((feature, featureIdx) => (
+              <li key={featureIdx} className="flex items-start">
+                <span className="text-green-600 mr-3 mt-1 font-bold">✓</span>
+                <span className="text-gray-700">{feature}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <div className="text-center">
             <AnimatedAnchor
-              href="/contact"
-              className="mt-auto bg-[#1f4494] text-white font-semibold py-3 px-6 rounded hover:bg-[#18316b] transition-colors text-center"
+              href="/services"
+              className="inline-block bg-[#1f4494] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#18316b] transition-colors text-lg"
             >
-              Get Started
+              View All Services
             </AnimatedAnchor>
-          </AnimatedCard>
-        ))}
+          </div>
+        </AnimatedCard>
       </div>
     </>
   );
@@ -167,26 +142,34 @@ function ServicesSection() {
 export default function Home() {
   return (
     <AnimatedSection className="w-full flex flex-col items-center justify-center py-40 text-center bg-grid">
+      {/* STEP 1A: Keeping existing visual exactly as is */}
       <AnimatedSection className="w-full max-w-xl mx-auto mb-10">
         <HeroIsometric className="w-full h-auto max-h-56 mx-auto" />
       </AnimatedSection>
-      <AnimatedHeading as="h1" className="text-6xl font-extrabold mb-6 text-gray-900">
-        I build clean sites and fix messy tech.
+      
+      {/* STEP 2A: Strong client-facing headline */}
+      <AnimatedHeading as="h1" className="text-4xl md:text-6xl font-extrabold mb-6 text-gray-900">
+        Custom-coded websites for small businesses, done fast and clean.
       </AnimatedHeading>
-      <AnimatedParagraph className="text-xl mb-10" style={{ color: '#1f4494' }}>
-        Smart solutions, sharp design, no bs. Let&apos;s talk.
+      
+      {/* STEP 2B: Intro paragraph explaining who the service is for */}
+      <AnimatedParagraph className="text-lg md:text-xl mb-8 text-gray-700 max-w-3xl mx-auto">
+        I build fast, modern websites for local service pros, solo creatives, and small businesses who want to look legit online without wasting time on bloated builders or overpriced agencies.
       </AnimatedParagraph>
+      
+      {/* STEP 2C: Bold CTA button */}
       <AnimatedAnchor
         href="/contact"
-        className="inline-block bg-primary text-white px-8 py-3 rounded hover:bg-primary/90 transition font-semibold"
+        className="inline-block bg-[#1f4494] text-white px-8 py-4 rounded-lg hover:bg-[#18316b] transition font-semibold text-lg"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.6 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.97 }}
       >
-        Get in touch
+        Get a Free Quote
       </AnimatedAnchor>
+      
       <SectionDivider />
       <ServicesSection />
       <SectionDivider />
