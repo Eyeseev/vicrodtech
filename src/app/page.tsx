@@ -190,7 +190,7 @@ export default function Home() {
         <p className="mb-4 text-sm text-gray-700">Let&apos;s build something clean and conversion-ready.</p>
         <AnimatedAnchor
           href="/contact"
-          className="inline-block bg-black text-white py-3 px-6 rounded w-full font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          className="inline-block bg-[#1f4494] hover:bg-[#18316b] text-white py-3 px-6 rounded w-full font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
         >
           Start My Website
         </AnimatedAnchor>
