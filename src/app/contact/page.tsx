@@ -106,6 +106,15 @@ function LoadingSpinner() {
   );
 }
 
+// Check Circle Icon Component
+function CheckCircleIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  );
+}
+
 export default function Contact() {
   const { form, errors, submitted, loading, handleChange, handleSubmit } = useContactForm();
 
@@ -117,11 +126,11 @@ export default function Contact() {
           <div className="w-full max-w-xs mx-auto mb-8">
             <ContactEnvelope className="w-full h-auto max-h-20 mx-auto" />
           </div>
-          <AnimatedHeading as="h1" className="text-4xl font-bold text-center mb-6" style={{ color: '#1f4494' }}>
-            Let&apos;s Build Something Great
+          <AnimatedHeading as="h1" className="text-4xl font-bold tracking-tight sm:text-5xl mb-6" style={{ color: '#1f4494' }}>
+            Let&apos;s Get Your Website Started
           </AnimatedHeading>
-          <AnimatedParagraph className="text-lg text-gray-700 leading-relaxed">
-            Tell me a bit about your project. I&apos;ll get back to you within 1–2 business days.
+          <AnimatedParagraph className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+            Fill out the form and I&apos;ll follow up with next steps. Whether you&apos;re ready to begin or just exploring options, I&apos;m here to help.
           </AnimatedParagraph>
         </div>
 
@@ -158,6 +167,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   autoComplete="name"
+                  placeholder="Your name"
                   className={`w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                     errors.name ? 'border-red-500' : ''
                   }`}
@@ -184,6 +194,7 @@ export default function Contact() {
                   name="email"
                   type="email"
                   autoComplete="email"
+                  placeholder="you@example.com"
                   className={`w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                     errors.email ? 'border-red-500' : ''
                   }`}
@@ -212,13 +223,12 @@ export default function Contact() {
                   value={form.projectType}
                   onChange={handleChange}
                 >
-                  <option value="" className="text-gray-500">Select a project type...</option>
-                  <option value="new-website" className="text-gray-900">New Website</option>
-                  <option value="website-redesign" className="text-gray-900">Website Redesign</option>
-                  <option value="ecommerce" className="text-gray-900">E-commerce Site</option>
-                  <option value="landing-page" className="text-gray-900">Landing Page</option>
-                  <option value="blog" className="text-gray-900">Blog</option>
-                  <option value="other" className="text-gray-900">Other</option>
+                  <option value="" className="text-gray-500">Select a project type</option>
+                  <option value="starter-website" className="text-gray-900">Starter Website</option>
+                  <option value="redesign" className="text-gray-900">Redesign</option>
+                  <option value="hosting-support" className="text-gray-900">Hosting Support</option>
+                  <option value="add-ons" className="text-gray-900">Add-Ons</option>
+                  <option value="something-else" className="text-gray-900">Something Else</option>
                 </select>
               </div>
 
@@ -231,6 +241,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={5}
+                  placeholder="Tell me a bit about your project, timeline, and goals..."
                   className={`w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none ${
                     errors.message ? 'border-red-500' : ''
                   }`}
@@ -239,7 +250,6 @@ export default function Contact() {
                   required
                   aria-invalid={!!errors.message}
                   aria-describedby="message-error"
-                  placeholder="Tell me about your project goals, timeline, or any questions you have..."
                 />
                 {errors.message && (
                   <span id="message-error" className="text-red-600 text-sm mt-1 block">
@@ -263,16 +273,11 @@ export default function Contact() {
           ) : (
             /* Success Message */
             <div className="text-center py-8">
-              <div className="mb-6">
-                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent Successfully!</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Thanks for reaching out! I&apos;ll review your message and get back to you within 1–2 business days.
-                </p>
+              <div className="text-green-600 mt-6 flex items-center gap-2 justify-center mb-4">
+                <CheckCircleIcon className="h-5 w-5" />
+                <span className="font-medium">
+                  Thanks! Your message was sent successfully. I&apos;ll be in touch shortly with next steps.
+                </span>
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                 <p className="text-green-800 text-sm">

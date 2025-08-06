@@ -13,20 +13,6 @@ const featuredProject = {
   image: "/mindful-therapy-screenshot.png"
 };
 
-const coreService = {
-  title: "Modern Starter Site",
-  subtitle: "Perfect foundation for growing businesses",
-  price: "$1,200",
-  description: "3–5 page custom-coded website built with Next.js, hosted on Vercel, fully responsive and SEO-ready. Client provides content (copywriting available as add-on).",
-  features: [
-    "3–5 page custom-coded website built with Next.js",
-    "Hosted on Vercel with SSL & CDN",
-    "Fully responsive and SEO-ready",
-    "Client provides content (copywriting available as add-on)",
-    "Page examples: Homepage, About, Contact + 2 of choice"
-  ]
-};
-
 function FeaturedProjectBanner() {
   return (
     <>
@@ -80,25 +66,24 @@ function SectionDivider() {
 function ServicesSection() {
   return (
     <>
-      <AnimatedHeading as="h2" className="text-4xl font-extrabold mb-6 text-center" style={{ color: '#1f4494' }}
+      <AnimatedHeading as="h2" className="text-3xl font-semibold tracking-tight sm:text-4xl mb-6 text-center" style={{ color: '#1f4494' }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.6 }}
       >
-        Services & Pricing
+        Professional Sites That Make You Look Legit
       </AnimatedHeading>
-      <AnimatedParagraph className="mb-12 text-center text-gray-700 max-w-3xl mx-auto"
+      <AnimatedParagraph className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto text-center mb-12"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
-        Professional web solutions for service-based businesses, creatives, and small business owners. 
-        Clean, fast, custom-coded websites that convert visitors into customers.
+        I design and build clean, high-performance websites that help you earn trust, stand out from the noise, and convert more visitors — without the headache of DIY builders or bloated templates.
       </AnimatedParagraph>
       
-      {/* 2. Pricing Card with improved design */}
+      {/* Modern Starter Site Preview */}
       <div className="bg-gradient-to-b from-white via-gray-50 to-gray-100 rounded-xl p-10 shadow-lg max-w-2xl mx-auto">
         <AnimatedCard
           className="flex flex-col space-y-4"
@@ -108,34 +93,37 @@ function ServicesSection() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <div className="text-center space-y-4">
-            <h3 className="text-3xl font-bold text-gray-900 !opacity-100">{coreService.title}</h3>
-            {/* 2. High contrast price */}
-            <div className="text-3xl font-bold text-black !opacity-100">{coreService.price}</div>
-            <p className="text-gray-600 !opacity-100">{coreService.subtitle}</p>
+            <h3 className="text-2xl font-semibold text-gray-900">
+              Modern Starter Site
+            </h3>
+            <p className="text-xl text-blue-600 font-medium">
+              $1,200 Flat Rate
+            </p>
+            <p className="text-gray-600">
+              The perfect launchpad for your brand&apos;s online presence.
+            </p>
           </div>
           
           <div className="space-y-4">
-            <p className="text-gray-700 !opacity-100 leading-relaxed text-center">
-              {coreService.description}
+            <p className="text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+              A clean, 3–5 page custom-coded website built with Next.js and hosted on Vercel. Fully responsive, fast, and SEO-ready — designed to grow with your business. You provide the content, or I can help with that too.
             </p>
             
-            <ul className="space-y-3 !opacity-100 max-w-2xl mx-auto">
-              {coreService.features.map((feature, featureIdx) => (
-                <li key={featureIdx} className="flex items-start">
-                  <span className="text-green-600 mr-3 mt-1 font-bold">✓</span>
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
+            <ul className="mt-6 space-y-3 text-lg text-gray-700 list-disc list-inside max-w-2xl mx-auto">
+              <li>3–5 custom pages (Home, About, Contact, +2 of your choice)</li>
+              <li>Fully responsive, built with Tailwind CSS + Next.js</li>
+              <li>Hosting on Vercel with free SSL & global CDN</li>
+              <li>SEO-optimized meta and performance tuning</li>
+              <li>Optional add-on: Copywriting and blog setup</li>
             </ul>
           </div>
           
-          {/* 2. Clear CTA button under feature list */}
           <div className="text-center pt-4">
             <AnimatedAnchor
               href="/contact"
               className="inline-block bg-[#1f4494] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#18316b] transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
-              Get a Quote
+              Get a Custom Quote
             </AnimatedAnchor>
           </div>
         </AnimatedCard>
@@ -147,35 +135,48 @@ function ServicesSection() {
 export default function Home() {
   return (
     <AnimatedSection className="w-full flex flex-col items-center justify-center py-20 space-y-16 bg-grid">
-      {/* 1. Hero Section with improvements */}
+      {/* Hero Section */}
       <AnimatedSection className="w-full max-w-2xl mx-auto text-center space-y-4">
         {/* Keep existing visual */}
         <div className="w-full max-w-xl mx-auto mb-10">
           <HeroIsometric className="w-full h-auto max-h-56 mx-auto" />
         </div>
         
-        {/* 1. Increased headline size */}
-        <AnimatedHeading as="h1" className="text-5xl font-extrabold text-gray-900">
-          Custom-coded websites for small businesses, done fast and clean.
+        {/* Updated headline */}
+        <AnimatedHeading as="h1" className="text-4xl font-bold tracking-tight sm:text-5xl text-gray-900">
+          Custom-Coded Websites Built to Convert
         </AnimatedHeading>
         
-        {/* 1. Added subheading */}
-        <AnimatedParagraph className="text-xl text-gray-600">
-          Custom-coded websites for small business owners — done fast, clean, and on budget.
+        {/* Updated subheadline */}
+        <AnimatedParagraph className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+          Fast, responsive websites tailored for service pros, creatives, and growing businesses — built from scratch with zero builder fluff.
         </AnimatedParagraph>
         
-        {/* 1. CTA button with improved spacing */}
-        <AnimatedAnchor
-          href="/contact"
-          className="inline-block bg-[#1f4494] text-white px-8 py-4 rounded-lg hover:bg-[#18316b] transition font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          Start Your Website
-        </AnimatedAnchor>
+        {/* Updated CTA buttons */}
+        <div className="mt-6 flex flex-wrap gap-4 justify-center">
+          <AnimatedAnchor
+            href="/contact"
+            className="inline-block bg-[#1f4494] text-white px-8 py-4 rounded-lg hover:bg-[#18316b] transition font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            Start My Website
+          </AnimatedAnchor>
+          <AnimatedAnchor
+            href="/services"
+            className="inline-block bg-white text-[#1f4494] border-2 border-[#1f4494] px-8 py-4 rounded-lg hover:bg-[#1f4494] hover:text-white transition font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.7 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            View Services & Pricing
+          </AnimatedAnchor>
+        </div>
       </AnimatedSection>
       
       <SectionDivider />

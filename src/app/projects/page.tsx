@@ -3,6 +3,8 @@ import ProjectsStack from "../../components/svg/ProjectsStack";
 import { projects } from "../../data/projects";
 import AnimatedCard from "../../components/ui/AnimatedCard";
 import AnimatedAnchor from "../../components/ui/AnimatedAnchor";
+import AnimatedHeading from "../../components/ui/AnimatedHeading";
+import AnimatedParagraph from "../../components/ui/AnimatedParagraph";
 
 export default function Projects() {
   return (
@@ -13,83 +15,93 @@ export default function Projects() {
           <div className="w-full max-w-xs mx-auto mb-8">
             <ProjectsStack className="w-full h-auto max-h-24 mx-auto" />
           </div>
-          <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">Recent Projects</h1>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-            Here are some of the websites I&apos;ve built for clients. Each project is custom-coded 
-            and designed to help businesses look professional online.
-          </p>
+          <AnimatedHeading as="h1" className="text-4xl font-bold tracking-tight sm:text-5xl mb-6 text-gray-900">
+            Recent Projects
+          </AnimatedHeading>
+          <AnimatedParagraph className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+            A few clean, modern websites I&apos;ve built for real clients. Each one was custom-coded to meet their unique goals — no builders, no templates.
+          </AnimatedParagraph>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-12 space-y-8">
           {projects.map((project, idx) => (
             <AnimatedCard
               key={idx}
-              className="bg-white rounded-xl shadow-md p-6 space-y-4 hover:shadow-lg transition-shadow"
+              className="border rounded-xl p-6 bg-gray-50/50 hover:shadow-md transition-shadow"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
             >
               {/* Project Image */}
-              {project.image && project.link && (
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
-                  <img
-                    src={project.image}
-                    alt={project.title + ' screenshot'}
-                    className="w-full aspect-video object-cover rounded-md shadow-md border border-gray-200 hover:opacity-90 transition-opacity"
-                  />
-                </a>
-              )}
-              {project.image && !project.link && (
-                <img
-                  src={project.image}
-                  alt={project.title + ' screenshot'}
-                  className="w-full aspect-video object-cover rounded-md shadow-md border border-gray-200"
-                />
+              {project.image && (
+                <div className="mb-4">
+                  {project.link ? (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                      <img
+                        src={project.image}
+                        alt={project.title + ' screenshot'}
+                        className="w-full aspect-video object-cover rounded-md shadow-md border border-gray-200 hover:opacity-90 transition-opacity"
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={project.title + ' screenshot'}
+                      className="w-full aspect-video object-cover rounded-md shadow-md border border-gray-200"
+                    />
+                  )}
+                </div>
               )}
               
               {/* Project Title */}
-              <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
+              <h3 className="text-2xl font-semibold text-gray-900">{project.title}</h3>
               
               {/* Project Description */}
-              <p className="text-gray-700 leading-relaxed">{project.description}</p>
+              <p className="mt-2 text-gray-700 leading-relaxed">
+                {project.description}
+              </p>
               
               {/* Client Type and Tech Stack */}
-              <div className="text-sm text-gray-600">
+              <div className="mt-4 text-sm text-gray-600">
                 <p><strong>Client:</strong> {project.clientType}</p>
                 <p><strong>Tech:</strong> {project.techStack}</p>
               </div>
               
               {/* Unique Project Detail */}
-              <p className="text-sm text-gray-600 italic">{project.uniqueDetail}</p>
+              <p className="mt-2 text-sm text-gray-600 italic">{project.uniqueDetail}</p>
               
               {/* View Project Link */}
               {project.link && (
-                <a 
-                  href={project.link} 
-                  className="inline-block text-blue-600 hover:text-blue-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  View Project →
-                </a>
+                <div className="mt-4 flex gap-4">
+                  <AnimatedAnchor 
+                    href={project.link} 
+                    className="inline-block text-blue-600 hover:text-blue-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    View Live Site
+                  </AnimatedAnchor>
+                </div>
               )}
             </AnimatedCard>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center bg-gray-50 rounded-xl p-10">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Want a site like one of these?</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Let&apos;s discuss your project and create something amazing for your business.
-          </p>
+        {/* Projects CTA Section */}
+        <div className="mt-16 bg-gray-50 p-8 rounded-xl text-center space-y-4">
+          <AnimatedHeading as="h3" className="text-2xl font-semibold text-gray-900">
+            Ready to Build Something Clean & Custom?
+          </AnimatedHeading>
+          <AnimatedParagraph className="text-gray-700">
+            Whether you&apos;re launching a brand, upgrading an outdated site, or finally going pro — let&apos;s make your next website the one you&apos;re proud to show off.
+          </AnimatedParagraph>
           <AnimatedAnchor 
             href="/contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            Start Your Website
+            Start My Website
           </AnimatedAnchor>
         </div>
       </div>
