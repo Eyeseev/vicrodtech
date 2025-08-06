@@ -34,6 +34,13 @@ export default function StickyCTA() {
     setDismissed(true);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleDismiss();
+    }
+  };
+
   if (dismissed) return null;
 
   return (
@@ -47,17 +54,18 @@ export default function StickyCTA() {
       <motion.div animate={controls} className="flex items-center gap-4">
         <Link
           href="/contact"
-          className="flex items-center gap-2 font-semibold text-gray-800 hover:text-primary focus:text-primary transition outline-none"
+          className="flex items-center gap-2 font-semibold text-gray-800 hover:text-primary focus:text-primary transition outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded"
         >
           <span>Let&apos;s work together</span>
-          <span className="bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition font-semibold">Contact</span>
+          <span className="bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Contact</span>
         </Link>
       </motion.div>
       <button
         aria-label="Dismiss"
         title="Dismiss"
         onClick={handleDismiss}
-        className="ml-2 w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-200 focus:bg-gray-200 focus:outline-none transition"
+        onKeyDown={handleKeyDown}
+        className="ml-2 w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
         tabIndex={0}
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

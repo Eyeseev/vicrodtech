@@ -82,9 +82,9 @@ export default function ServicesPage() {
           <div className="text-center pt-6">
             <AnimatedAnchor 
               href="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
-              Get Started
+              Start Your Website
             </AnimatedAnchor>
           </div>
         </AnimatedCard>
@@ -186,7 +186,7 @@ export default function ServicesPage() {
               <div className="text-center">
                 <AnimatedAnchor 
                   href="/contact" 
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                 >
                   Choose Managed
                 </AnimatedAnchor>
@@ -226,7 +226,7 @@ export default function ServicesPage() {
               <div className="text-center">
                 <AnimatedAnchor 
                   href="/contact" 
-                  className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                  className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                 >
                   Choose Self-Hosted
                 </AnimatedAnchor>
@@ -243,9 +243,9 @@ export default function ServicesPage() {
           </p>
           <AnimatedAnchor 
             href="/contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            Start Your Project
+            Start Your Website
           </AnimatedAnchor>
         </div>
       </div>

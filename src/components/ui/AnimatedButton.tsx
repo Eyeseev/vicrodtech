@@ -33,7 +33,7 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
       transition={transition}
       whileHover={whileHover}
       whileTap={whileTap}
-      className={className}
+      className={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${className}`}
       tabIndex={0}
       {...rest}
     >

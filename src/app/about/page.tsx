@@ -89,9 +89,9 @@ export default function About() {
             </p>
             <AnimatedAnchor 
               href="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
-              Start your site →
+              Start Your Website
             </AnimatedAnchor>
           </AnimatedSection>
         </div>

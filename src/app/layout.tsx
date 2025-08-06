@@ -18,6 +18,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Private IT Support | Custom Websites by Vic",
   description: "Professional web solutions for service-based businesses, creatives, and small business owners. Clean, fast, custom-coded websites that convert visitors into customers.",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', type: 'image/x-icon' }
+    ],
+    apple: '/favicon.svg',
+  },
 };
 
 // STEP 1B: Added footer with privacy policy and terms links
@@ -61,8 +68,15 @@ export default function RootLayout({
         {/* <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script> */}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-grid`}>
+        {/* Skip to content link for keyboard users */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          Skip to main content
+        </a>
         <NavBar />
-        <main className="min-h-screen flex flex-col items-center justify-start px-4">
+        <main id="main-content" className="min-h-screen flex flex-col items-center justify-start px-4">
           {children}
         </main>
         <Footer />

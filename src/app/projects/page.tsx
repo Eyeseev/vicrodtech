@@ -68,7 +68,7 @@ export default function Projects() {
               {project.link && (
                 <a 
                   href={project.link} 
-                  className="inline-block text-blue-600 hover:text-blue-700 font-medium transition-colors" 
+                  className="inline-block text-blue-600 hover:text-blue-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -87,9 +87,9 @@ export default function Projects() {
           </p>
           <AnimatedAnchor 
             href="/contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            Start Your Project
+            Start Your Website
           </AnimatedAnchor>
         </div>
       </div>

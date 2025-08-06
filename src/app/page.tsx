@@ -57,7 +57,7 @@ function FeaturedProjectBanner() {
           <p className="mb-4 text-gray-700">{featuredProject.description}</p>
           <AnimatedAnchor
             href={featuredProject.link}
-            className="inline-block bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition font-semibold"
+            className="inline-block bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
             View Project
           </AnimatedAnchor>
@@ -133,7 +133,7 @@ function ServicesSection() {
           <div className="text-center pt-4">
             <AnimatedAnchor
               href="/contact"
-              className="inline-block bg-[#1f4494] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#18316b] transition-colors text-lg"
+              className="inline-block bg-[#1f4494] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#18316b] transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               Get a Quote
             </AnimatedAnchor>
@@ -167,14 +167,14 @@ export default function Home() {
         {/* 1. CTA button with improved spacing */}
         <AnimatedAnchor
           href="/contact"
-          className="inline-block bg-[#1f4494] text-white px-8 py-4 rounded-lg hover:bg-[#18316b] transition font-semibold text-lg"
+          className="inline-block bg-[#1f4494] text-white px-8 py-4 rounded-lg hover:bg-[#18316b] transition font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.6 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
         >
-          Start Your Project
+          Start Your Website
         </AnimatedAnchor>
       </AnimatedSection>
       

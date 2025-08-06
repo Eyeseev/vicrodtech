@@ -31,7 +31,7 @@ const NavBar = () => {
               key={href}
               href={href}
               className={
-                "font-semibold transition hover:underline hover:underline-offset-4 hover:decoration-primary " +
+                "font-semibold transition hover:underline hover:underline-offset-4 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded " +
                 (isActive
                   ? "text-primary underline underline-offset-4 decoration-primary"
                   : "text-gray-700 hover:text-primary")
