@@ -27,13 +27,7 @@ export default function ServicesPage() {
         </div>
         
         {/* Your Starter Website Package */}
-        <AnimatedCard
-          className="bg-white rounded-xl shadow-md p-10 space-y-6"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
+        <AnimatedCard className="bg-white rounded-xl shadow-md p-10 space-y-6">
           <div className="text-center">
             <AnimatedHeading as="h2" className="text-3xl font-semibold tracking-tight sm:text-4xl mb-4 text-gray-900">
               Your Starter Website Package
@@ -73,13 +67,7 @@ export default function ServicesPage() {
         </AnimatedCard>
 
         {/* Optional Add-Ons Section */}
-        <AnimatedCard
-          className="bg-white rounded-xl shadow-md p-10 space-y-6"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        <AnimatedCard className="bg-white rounded-xl shadow-md p-10 space-y-6">
           <div className="text-center mb-8">
             <AnimatedHeading as="h2" className="text-3xl font-semibold tracking-tight sm:text-4xl mb-4 text-gray-900">
               Optional Add-Ons
@@ -146,13 +134,7 @@ export default function ServicesPage() {
         </AnimatedCard>
 
         {/* Hosting Options Section */}
-        <AnimatedCard
-          className="bg-white rounded-xl shadow-md p-10 space-y-6"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
+        <AnimatedCard className="bg-white rounded-xl shadow-md p-10 space-y-6">
           <div className="text-center mb-8">
             <AnimatedHeading as="h2" className="text-3xl font-semibold tracking-tight sm:text-4xl mb-4 text-gray-900">
               Hosting Options
