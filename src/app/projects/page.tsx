@@ -29,10 +29,6 @@ export default function Projects() {
             <AnimatedCard
               key={idx}
               className="border rounded-xl p-6 bg-gray-50/50 hover:shadow-md transition-shadow"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
             >
               {/* Project Image */}
               {project.image && (

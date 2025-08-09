@@ -1,5 +1,6 @@
 // Vercel: force rebuild, no unused pathname variable present
 import type { Metadata } from "next";
+import { site } from "@/content/site";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/ui/NavBar";
@@ -16,14 +17,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Private IT Support | Custom Websites by Vic",
-  description: "Professional web solutions for service-based businesses, creatives, and small business owners. Clean, fast, custom-coded websites that convert visitors into customers.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: "Custom Websites that Convert | VicRodTech",
+    template: "%s | VicRodTech",
+  },
+  description:
+    "Custom‑coded websites for small businesses. Fast, mobile‑first, clear scope, 48–72h task turnaround.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Custom Websites that Convert | VicRodTech",
+    description:
+      "Custom‑coded websites for small businesses. Fast, mobile‑first, clear scope, 48–72h task turnaround.",
+    url: site.url,
+    siteName: "VicRodTech",
+    images: [
+      {
+        url: "/vic-rod-tech-homepage.png",
+        width: 1200,
+        height: 630,
+        alt: "VicRodTech homepage preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', type: 'image/x-icon' }
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", type: "image/x-icon" },
     ],
-    apple: '/favicon.svg',
+    apple: "/favicon.svg",
   },
 };
 
@@ -67,7 +91,7 @@ export default function RootLayout({
         {/* STEP 3D: Analytics placeholder - replace with actual Plausible script */}
         {/* <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script> */}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-grid`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-grid scroll-smooth`}>
         {/* Skip to content link for keyboard users */}
         <a
           href="#main-content"

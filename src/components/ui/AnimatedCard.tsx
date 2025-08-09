@@ -1,37 +1,17 @@
-import { motion, HTMLMotionProps } from "framer-motion";
 import React from "react";
 
-interface AnimatedCardProps extends HTMLMotionProps<"div"> {
+interface AnimatedCardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
 }
 
-const defaultInitial = { opacity: 0, y: 40 };
-const defaultAnimate = { opacity: 1, y: 0 };
-const defaultTransition = { duration: 0.7 };
+// Static card wrapper (animation removed for RSC compatibility)
 
 const AnimatedCard = React.forwardRef<HTMLDivElement, AnimatedCardProps>(
-  (
-    {
-      children,
-      className = "card",
-      initial = defaultInitial,
-      animate = defaultAnimate,
-      transition = defaultTransition,
-      ...rest
-    },
-    ref
-  ) => (
-    <motion.div
-      ref={ref}
-      initial={initial}
-      animate={animate}
-      transition={transition}
-      className={className}
-      {...rest}
-    >
+  ({ children, className = "card", ...rest }, ref) => (
+    <div ref={ref} className={className} {...rest}>
       {children}
-    </motion.div>
+    </div>
   )
 );
 AnimatedCard.displayName = "AnimatedCard";
